@@ -17,11 +17,14 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from cdb import views
+from club import views as clubviews
 from rest_framework.authtoken import views as authviews
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
+router.register(r'clubs', clubviews.ClubViewSet)
+router.register(r'announcements', clubviews.AnnouncementViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
