@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 class Club(models.Model):
 	name = models.CharField(max_length=120)
 	description = models.TextField()
-	members = models.ManyToManyField(User)
+	members = models.ManyToManyField(User, blank=True)
 
 class Announcement(models.Model):
 	club = models.ForeignKey(Club, on_delete=models.CASCADE)

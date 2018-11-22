@@ -30,5 +30,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 		path('api-auth/', include('rest_framework.urls')),
 		path('api/', include(router.urls)),
-		path('api-token-auth/', authviews.obtain_auth_token, name='api-token-auth')
+		path('api-token-auth/', authviews.obtain_auth_token, name='api-token-auth'),
+		path('rest-auth/', include('rest_auth.urls')),
+		path('rest-auth/registration/', include('rest_auth.registration.urls'))
 ]

@@ -7,6 +7,7 @@ class ClubViewSet(viewsets.ModelViewSet):
 	queryset = Club.objects.all()
 	serializer_class = ClubSerializer
 
+
 class AnnouncementViewSet(viewsets.ModelViewSet):
 	queryset = Announcement.objects.all()
 	serializer_class = AnnouncementSerializer

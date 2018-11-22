@@ -37,12 +37,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+		'django.contrib.sites',
 
 		'rest_framework',
 		'rest_framework.authtoken',
+		'allauth',
+		'allauth.account',
+		'rest_auth.registration',
+		'rest_auth',
 
 		'club'
 ]
+SITE_ID = 1
 
 REST_FRAMEWORK = {
 	'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -132,3 +138,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
